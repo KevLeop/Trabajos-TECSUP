@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="02-reto2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Selectores CSS</h1>
+      <h2>Formulario</h2>
+    </header>
+    <form>
+      <fieldset>
+        <legend>Formulario de Creación de un curso</legend>
+        <p>
+          <label for="nombre-curso">Nombre del Curso</label>
+          <input
+            placeholder="Ej.: VUE JS desde cero"
+            type="text"
+            id="nombre-curso"
+          />
+        </p>
+        <p>
+          <label for=""> Precio del curso</label>
+          <input placeholder="Precio en soles" type="number" />
+        </p>
+        <p>
+          <label for="">Fecha de inicio</label>
+          <input type="date" />
+        </p>
+        <p>
+          <label for="">Correo del docente: </label>
+          <input type="email" placeholder="@tecsup.edu.pe" />
+        </p>
+        <p>
+          <label for="">Contraseña del curso </label><input type="password"
+          placeholder="6 caracteres como minimo"
+        </p>
+        <p class="verdeagua">
+          <label for="">Elija el turno</label>
+          <input type="radio" name="turno" /> Mañana
+          <input type="radio" name="turno" /> Noche
+        </p>
+        <p class="verdeagua">
+          <label for="">Tipo de pago</label>
+          <input type="radio" name="pago" /> En cuotas
+          <input type="radio" name="pago" /> Directo
+        </p>
+        <p class="verdeagua">
+          <label for="">Idiomas del curso</label>
+          <input type="checkbox" name="" id="" /> Español
+          <input type="checkbox" name="" id="" /> Inglés
+          <input type="checkbox" name="" id="" /> Portugues
+        </p>
+        <p><label for="">Nivel del curso</label></p>
+        <select name="" id="">
+          <option disabled selected>-- Seleccione --</option>
+          <option value="AL">Alto</option>
+          <option value="ME">Medio</option>
+          <option value="BA">Bajo</option>
+        </select>
+        <p>
+          <label for=""> Descripción del curso </label>
+          <textarea
+            name=""
+            id="txt"
+            cols="60"
+            rows="15"
+            placeholder="Descripcion general del curso"
+          ></textarea>
+        </p>
+        <p class="azul">
+          <label for="">Video Introduccion</label>
+          <input type="file" />
+        </p>
+        <p>
+          <label for="">Color base del curso:</label>
+          <input type="color" />
+        </p>
+        <p>
+          <input type="submit" value="Crear curso" />
+          <input type="reset" value="Limpiar formulario" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

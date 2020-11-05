@@ -1,0 +1,10 @@
+p {
+  color: cadetblue;
+  border: 3px solid pink;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid blue
+  border-radius: 1cm;
+}

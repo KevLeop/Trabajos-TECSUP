@@ -1,0 +1,16 @@
+/* Selector de descendientes de UL a cualquier nivel (hijos, nietos, etc) */
+ul li {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+/* Selector de hijos de OL de primer nivel */
+ol > li {
+  color: cadetblue;
+}
+
+h1,
+h2 {
+  color: cornflowerblue;
+  font-family: Arial, Helvetica, sans-serif;
+}

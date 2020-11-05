@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formularios</h1>
+    </header>
+    <main>
+      <section>
+        <h3>Formulario de registro</h3>
+        <form>
+          <fieldset>
+            <legend>Datos obligatorios</legend>
+            <p>
+              <label for="nombres"> Nombres:</label>
+              <input placeholder="Ej.: Daniel" type="text" id="nombres" />
+            </p>
+            <p>
+              <label for="apellidos"> Apellidos</label>
+              <input placeholder="Ej.: Perez" type="text" id="apellidos" />
+            </p>
+            <p>
+              <label for="email"> E-mail: </label>
+              <input placeholder="xxxx@xxx.com" type="email" id="email" />
+            </p>
+            <p>
+              <label for="edad"> Edad: </label>
+              <input
+                placeholder="Ej.: 25"
+                type="number"
+                id="edad"
+                min="0"
+                max="100"
+              />
+            </p>
+            <p>
+              <label for="fecha"> Fecha: </label>
+              <input type="date" id="fecha" />
+            </p>
+            <p>
+              <label for="pass"> Contraseña: </label>
+              <input
+                type="password"
+                placeholder="Ingrese u contraseña"
+                id="pass"
+              />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Datos adicionales</legend>
+            <p>
+              <label for=""> Color favorito: </label>
+              <input type="color" />
+            </p>
+            <p>
+              <label> Adjuntar foto: </label>
+              <input type="file" />
+            </p>
+            <p>
+              <label for=""> Género: </label>
+              <input type="radio" name="genero" /> Femenino
+              <input type="radio" name="genero" /> Masculino
+            </p>
+            <p>
+              <label for=""> Tus hobbies</label>
+              <input type="checkbox" name="" id="" /> Escuchar música
+              <input type="checkbox" name="" id="" /> Tocar guitarra
+              <input type="checkbox" name="" id="" /> Leer un libro
+              <input type="checkbox" name="" id="" /> Cocinar
+              <input type="checkbox" name="" id="" /> Conocer gente
+            </p>
+            <p>
+              <label> Selecciona tu departamento: </label>
+              <select>
+                <option disabled selected>-- Selecciona tu ciudad</option>
+                <option value="AR">Arequipa</option>
+                <option value="LI">Lima</option>
+                <option value="LO">Loreto</option>
+                <option value="IC">Ica</option>
+                <option value="MO">Moquegua</option>
+                <option value="TU">Tumbes</option>
+              </select>
+            </p>
+            <p>
+              <label for="txt"> Cuéntanos de ti: </label>
+              <textarea name="" id="txt" cols="60" rows="15"></textarea>
+            </p>
+            <p>
+              <label> Cantidad de hijos: </label>
+              <input type="range" />
+            </p>
+          </fieldset>
+          <input type="submit" value="Enviar formulario" />
+          <input type="reset" value="Limpiar formulario" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

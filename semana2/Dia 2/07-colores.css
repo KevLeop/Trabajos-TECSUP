@@ -1,0 +1,52 @@
+body {
+  background-image: linear-gradient(to left, blue, steelblue);
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.blue {
+  color: blue;
+}
+
+.azulhex {
+  color: #00f;
+}
+
+.violetahex {
+  color: #ff00ff;
+}
+
+.grishex {
+  color: #aaa;
+}
+
+.rosado {
+  color: rgb(255, 185, 200);
+}
+
+.mostaza {
+  color: rgb(255, 210, 20);
+}
+
+.alpha {
+  background-color: rgba(240, 100, 177, 0.4);
+}
+
+.hsl1 {
+  background-color: hsl(270, 100, 50);
+}
+
+.hsl2 {
+  background-color: hsl(248, 53, 60);
+}
+
+.hsl3 {
+  background-color: hsla(66, 67, 57, 0.5);
+}

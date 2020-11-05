@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section1 {
+  background-color: white;
+  width: 600px;
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 25px;
+  box-shadow: 1px 1px 10px 2px darkgray;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Itim", sans-serif;
+  font-size: 190%;
+  margin-bottom: 20px;
+}
+
+label {
+  font-family: "LATO", sans-serif;
+  font-weight: 400;
+  font-size: 80%;
+  color: lightgray;
+  margin: 10px 0;
+  display: block;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  height: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  outline: none;
+  font-family: "LATO", sans-serif;
+  font-weight: 900;
+  font-size: 120%;
+  color: rgba(81, 81, 81, 0.728);
+}

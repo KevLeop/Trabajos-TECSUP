@@ -1,0 +1,29 @@
+h2 {
+  background-color: plum;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  background-color: lightblue;
+}
+
+p {
+  color: darkblue;
+}
+
+article {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkorange;
+}
+
+/* Selector por CLASE */
+.destacado {
+  text-decoration: underline;
+  color: blanchedalmond;
+}
+
+/* Selector para ID */
+#contacto {
+  background-color: tomato;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serifs;
+}

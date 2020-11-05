@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas - Celdas Combinadas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Celdas Combinadas</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Ejercicio - Tabla1</h2>
+        <table border="2">
+          <tbody>
+            <tr>
+              <td rowspan="2">Item 0</td>
+              <td>Item1</td>
+              <td>Item2</td>
+              <td>Item3</td>
+              <td>Item4</td>
+            </tr>
+            <tr>
+              <td>Item5</td>
+              <td>Item6</td>
+              <td>Item7</td>
+              <td>Item8</td>
+            </tr>
+            <tr>
+              <td>Item0</td>
+              <td>Item9</td>
+              <td>Item10</td>
+              <td>Item3</td>
+              <td>Item11</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <section>
+      <h2>Ejercicio - Tabla2</h2>
+      <table border="2">
+        <tbody>
+          <tr align="center">
+            <td rowspan="2"><b>Tabla Avanzada</b></td>
+            <td colspan="2"><b>Cabecera Multiples Columnas<b/></td>
+          </tr>
+          <tr align="center">
+            <td> <b>Primera Col. Cab</b></td>
+            <td><b>Segunda Col. Cab</b></td>
+          </tr>
+          <tr>
+            <td align="center"><b>Fila 1</b></td>
+            <td>Fila 1 Columna 1</td>
+            <td>Fila 1 Columna 2</td>
+          </tr>
+          <tr>
+            <td align="center"><b>Fila 2</b></td>
+            <td>Fila 2 Columna 1</td>
+            <td>Fila 2 Columna 2</td>
+          </tr>
+          <tfoot>
+            <tr>
+              <td colspan="3"> Pie de tabla</td>
+            </tr>
+          </tfoot>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

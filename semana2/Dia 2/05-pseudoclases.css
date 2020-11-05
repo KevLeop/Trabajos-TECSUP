@@ -1,0 +1,29 @@
+/* Primer hijo LI */
+li:first-child {
+  color: red;
+  text-decoration: underline;
+}
+
+/* enésimo hijo (3) */
+li:nth-child(3) {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Ultimo hijo */
+li:last-child {
+  color: chartreuse;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: darkgrey;
+}
+
+tbody tr:nth-child(even) {
+  background-color: darkkhaki;
+}
+
+thead tr th:nth-of-type(1) {
+  background-color: black;
+  color: aliceblue;
+}

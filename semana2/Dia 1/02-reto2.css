@@ -1,0 +1,19 @@
+.verdeagua {
+  color: darkcyan;
+}
+
+.azul {
+  color: blue;
+}
+
+label {
+  color: darkcyan;
+}
+
+input::placeholder {
+  color: blue;
+}
+
+input[value] {
+  color: blue;
+}

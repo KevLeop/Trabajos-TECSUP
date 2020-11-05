@@ -1,0 +1,32 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-personal {
+  background-color: coral;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.form-social {
+  background-color: dodgerblue;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.form-profesional {
+  background-color: lightgreen;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.input-steam {
+  background-color: midnightblue;
+  color: white;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+}

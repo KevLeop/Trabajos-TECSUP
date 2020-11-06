@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.section1 {
+  width: 500px;
+  height: 500px;
+  border: 2px solid red;
+}
+
+.article1 {
+  width: 20%;
+  height: 250px;
+  background-color: lightgreen;
+  display: inline-block;
+}
+
+.article2 {
+  width: 79%;
+  height: 200px;
+  background-color: rgb(251, 148, 14);
+  display: inline-block;
+}

@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "mi-fuente";
+  src: url("./Bellania.otf");
+}
+
 .titulo {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Itim", cursive;
+}
+
+h2 {
+  font-family: "mi-fuente";
+  font-weight: lighter;
+}
+
+.parrafo1 {
+  font-family: "Itim", cursive;
+  font-weight: lighter;
+}
+
+.parrafo2 {
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.parrafo3 {
+  font-family: "Itim", cursive;
+  font-weight: lighter;
+  word-spacing: 20px;
+  font-size: 30px;
+  text-decoration: underline red;
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
 }

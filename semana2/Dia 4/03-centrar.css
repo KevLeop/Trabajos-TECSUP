@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 600px;
+  height: 600px;
+  background-color: #555;
+  margin: 50px auto 0 auto;
+  box-shadow: 6px 6px 15px gray;
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  /* top: calc(50% - 50px);
+  left: calc(50% - 50px); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

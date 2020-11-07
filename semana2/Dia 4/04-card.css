@@ -45,3 +45,26 @@ body {
   text-align: center;
   padding-top: 50px;
 }
+
+.contenedor__titulo {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contenedor__button {
+  cursor: pointer;
+  margin: 35px 0 0 0;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0270ee;
+  border-bottom: 3px solid darkgray;
+  border-radius: 4px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.contenedor__button:hover {
+  background-color: #1e3ac9;
+  margin: 34px 0 0px 0;
+}

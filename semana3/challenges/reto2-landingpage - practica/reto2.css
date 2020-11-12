@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.wrapper {
+  min-width: 1440px;
+  height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(./images/bg-desktop.svg);
+}
+
+.wrapper__logo {
+  /* background-color: burlywood; */
+  padding-left: 10px;
+  padding-top: 25px;
+}
+
+.wrapper__logo img {
+  transform: scale(0.7);
+}
+
+.wrapper__info {
+  display: flex;
+  /* border: 3px solid white; */
+  padding: 50px 75px 25px 50px;
+}
+
+.wrapper__info img {
+  /* transform: scale(0.9); */
+  /* border: 2px solid palegreen; */
+}
+
+.info {
+  /* border: 1px solid red; */
+
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.info__texto h4 {
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 30px;
+  line-height: 55px;
+  font-size: 48px;
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.info__texto p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 30px;
+  font-size: 22px;
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.register__section {
+  /* background-color: tan; */
+  margin-top: 20px;
+}
+
+.register__btn {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: hsl(257, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: whitesmoke;
+  padding: 10px 50px;
+  box-shadow: 3px 3px 5px indigo;
+}
+
+.register__btn:hover {
+  color: white;
+  background-color: #e980e7;
+  cursor: pointer;
+}
+
+.wrapper__footer {
+  /* background-color: rgb(90, 50, 96); */
+  text-align: right;
+  padding-right: 75px;
+}
+
+.wrapper__btns {
+  /* border: 2px solid red; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.wrapper__footer button {
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+  border-radius: 50%;
+  color: whitesmoke;
+  padding: 15px 15px;
+  margin-left: 20px;
+}
+
+.redes:hover {
+  color: #e980e7;
+  border: 1px solid #e980e7;
+  cursor: pointer;
+}

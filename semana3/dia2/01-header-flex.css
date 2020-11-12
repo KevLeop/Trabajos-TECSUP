@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  color: #444;
+}
+
+body {
+  background-color: #5d3250;
+}
+
+.header {
+  height: 60px;
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 50px;
+}
+
+.header__logo {
+  display: flex;
+  gap: 20px; /* gap define el espacio entre los hijos flex*/
+  /* background-color: gray; */
+  align-items: center;
+}
+
+.header__brand {
+  font-size: 25px;
+}
+
+.header__img {
+  max-height: 100%;
+}
+
+.header__nav {
+  /* background-color: gray; */
+  /* flex: 1; */
+}
+
+.header__links {
+  /* background-color: green; */
+  list-style: none; /* para quitar las viñetas*/
+  display: flex;
+  height: 100%;
+  gap: 40px;
+}
+
+.header__link {
+  /* background-color: greenyellow; */
+  display: flex;
+  align-items: center;
+  transition: 0.2s all ease;
+}
+
+.header__link a {
+  text-decoration: none;
+  color: #444;
+}
+
+.header__link:hover a {
+  transform: translate(0, 3px);
+}
+
+.header__link:hover {
+  border-bottom: 4px solid #08a135;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__btn {
+  font-family: "Raleway", sans-serif;
+  border-radius: 5px;
+  min-width: 120px;
+  padding: 6px 4px;
+  background-color: transparent;
+  border: none;
+  outline: none; /*desactivar borde del btn cuando se hace clic*/
+  box-shadow: #ccc 0px 3px 3px;
+  cursor: pointer;
+}
+
+.header__btn:hover {
+  box-shadow: #ccc 0px 1px 3px;
+}
+
+.header__btn-primary {
+  background-color: #ddd;
+  font-weight: 500;
+}
+.header__btn-primary i {
+  color: #444;
+  margin-left: 5px;
+}
+
+.header__btn-secondary {
+  background-color: #08a135;
+  border: 1px solid #08832d;
+  color: #eee;
+}
+
+.header__btn-secondary i {
+  color: #eee;
+  margin-left: 5px;
+}

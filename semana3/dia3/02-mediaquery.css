@@ -53,6 +53,7 @@ body {
 .columna {
   /* background-color: #bbb; */
   flex: 25%;
+  max-width: 25%;
 }
 
 .card {
@@ -78,6 +79,7 @@ body {
   }
   .columna {
     flex: 50%;
+    max-width: 50%;
   }
 }
 
@@ -87,6 +89,7 @@ body {
   }
   .columna {
     flex: 100%;
+    max-width: 100%;
   }
   .header__list {
     flex-direction: column;

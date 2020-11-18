@@ -49,7 +49,6 @@ let suma = 0;
 var entrada = +prompt("Ingrese estatura: ");
 contador = 0;
 while (entrada > 0) {
-  debugger;
   suma += entrada;
   // let entrada = +prompt("Ingrese estatura: ");
   contador++;

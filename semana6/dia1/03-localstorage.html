@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        background-color: #444;
+        font-family: sans-serif;
+      }
+
+      form {
+        background-color: white;
+        padding: 2em;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 1em;
+      }
+
+      fieldset {
+        padding: 0.5em;
+      }
+
+      p {
+        margin-bottom: 0.3em;
+      }
+      .errorFormulario {
+        border: 3px solid crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formPreferencias">
+      <fieldset>
+        <legend>Preferencia</legend>
+        <label for=""> Color de fondo</label>
+        <input type="color" id="inputColor" />
+        <br />
+        <label for="">Tamaño de letra</label>
+        <input type="number" id="inputTamanio" /> <span>(pixeles)</span>
+        <br />
+        <button type="submit">Guardar preferencias</button>
+      </fieldset>
+    </form>
+
+    <script src="./03-localstorage.js"></script>
+  </body>
+</html>

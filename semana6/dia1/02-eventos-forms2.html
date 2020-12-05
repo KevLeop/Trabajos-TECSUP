@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear plato</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(203, 203, 203);
+        font-family: sans-serif;
+      }
+
+      form {
+        background-color: white;
+        padding: 2em;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 1em;
+      }
+
+      fieldset {
+        padding: 0.5em;
+      }
+
+      p {
+        margin-bottom: 0.3em;
+      }
+      .errorFormulario {
+        border: 3px solid crimson;
+      }
+
+      .contenedor {
+        background-color: goldenrod;
+        padding: 1em;
+        text-align: center;
+        max-width: 700px;
+        margin: 2em auto 0 auto;
+        border-radius: 1em;
+      }
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formPlatos">
+      <fieldset>
+        <legend>Crear Plato</legend>
+        <p>
+          <label for="">Nombre de Plato</label>
+          <input type="text" id="inputNombre" placeholder="Ejm.: Ceviche" />
+        </p>
+        <p>
+          <label for="">Precio</label>
+          <input type="number" id="inputPrecio" />
+        </p>
+        <p>
+          <label for="">Tipo</label>
+          <select name="" id="selectTipo">
+            <option value="0">--Seleccione tipo</option>
+          </select>
+        </p>
+        <p>
+          <label for="">Categoria</label>
+          <select name="" id="selectCategoria">
+            <option value="0">--Seleccione categoria</option>
+          </select>
+        </p>
+      </fieldset>
+      <button type="button" id="btnRegistrar">Registrar Plato</button>
+      <button type="button" id="btnLimpiar">Limpiar</button>
+    </form>
+    <section class="contenedor">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Tipo</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr id="rowInicial">
+            <td colspan="5">NO SE REGISTRARON PLATOS</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script src="./02-eventos-forms2.js"></script>
+  </body>
+</html>

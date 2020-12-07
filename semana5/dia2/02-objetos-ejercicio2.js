@@ -450,24 +450,61 @@ const printGenresByTitleMovie = (title) => {
   }
 };
 
-printGenresByTitleMovie("Hard Kill");
-
 /**
- * Funcoin que imprimir las peliculas que tengan
+ * Funcion que imprimir las peliculas que tengan
  * la mayor y menor cantidad de votos (vote_count)
  */
+const getVoteCount = () => {
+  voteCountArray = [];
+  peliculas.forEach((pelis, i) => {
+    voteCountArray[i] = pelis.vote_count;
+  });
 
-console.log(getVoteCount());
+  let minVoteCount = Math.min.apply(null, voteCountArray);
+  let maxVoteCount = Math.max.apply(null, voteCountArray);
 
-const mayorYMenor = () => {};
+  let listaObjMax = [];
+  let listaObjMin = [];
+  peliculas.find((peliMax) => {
+    if (peliMax.vote_count === maxVoteCount) {
+      listaObjMax.push(peliMax);
+      console.log(
+        `Pelicula(s) con maxima votacion: Nombre -> ${peliMax.original_title}, vote_count->${peliMax.vote_count}`
+      );
+    }
+  });
+
+  peliculas.find((peliMin) => {
+    if (peliMin.vote_count === minVoteCount) {
+      listaObjMin.push(peliMin);
+      console.log(
+        `Pelicula(s) con minima votacion: Nombre -> ${peliMin.original_title}, vote_count->${peliMin.vote_count}`
+      );
+    }
+  });
+};
 
 /** Funcion que imprime las peliculas (objetos) que tengan
  * la mayor cantidad de generos
  * Por ejemplo si la pelicula que más generos tenga es 5 generos
  * mostrar todas las peliculas que tengan 5 generos
  */
-
-const mayorCantidadDeGeneros = () => {};
+const mayorYMenor = () => {
+  let generosPeliLength = [];
+  peliculas.forEach((peli, i) => {
+    generosPeliLength[i] = peli.genre_ids.length;
+  });
+  cantidadMayorGenero = Math.max.apply(null, generosPeliLength);
+  arregloPeliculasMaxGenero = [];
+  peliculas.forEach((peli) => {
+    if (peli.genre_ids.length === cantidadMayorGenero) {
+      arregloPeliculasMaxGenero.push(peli);
+    } else {
+      return -1;
+    }
+  });
+  return arregloPeliculasMaxGenero;
+};
 
 /**
  * Funcion que retorna un ARREGLO DE PELICULAS qcon cada objeto que tenga
@@ -479,5 +516,31 @@ const mayorCantidadDeGeneros = () => {};
  * "peliculas" más el atributo.
  * HINT: Usar map
  */
+const moviesByGenre = (movieGenre) => {
+  let genreId = generos.find((genres) => {
+    if (genres.name === movieGenre) {
+      return genres.id;
+    } else {
+      return;
+    }
+  }).id;
+  movie = [];
+  peliculas.forEach((peli) => {
+    peli.genre_ids.forEach((id) => {
+      if (id === genreId) {
+        movie.push(peli);
+      }
+    });
+  });
+  console.log(movie);
+  return movie;
+};
 
-const peliculasConGeneros = () => {};
+printGenresByTitleMovie("Hard Kill");
+console.log("/////////////////////// Ejercicio 1 ///////////////////");
+getVoteCount();
+console.log("/////////////////////// Ejercicio 2 ///////////////////");
+console.log(mayorYMenor());
+console.log("/////////////////////// Ejercicio 3 ///////////////////");
+
+moviesByGenre("Animación");

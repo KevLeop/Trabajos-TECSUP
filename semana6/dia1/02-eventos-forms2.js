@@ -55,7 +55,7 @@ const selectCategoria = document.getElementById("selectCategoria");
 const btnRegistrar = document.getElementById("btnRegistrar");
 const btnLimpiar = document.getElementById("btnLimpiar");
 const tbody = document.getElementById("tbody");
-const rowInicial = document.getElementById("rowInicial");
+let row0 = document.getElementById("row0");
 
 const llenarTipos = () => {
   tipos.forEach((tipo) => {
@@ -104,6 +104,7 @@ selectTipo.onchange = (e) => {
 
 const llenarTabla = (plato) => {
   let fila = document.createElement("tr");
+  // fila.innerHTML = " ";
   fila.innerHTML = `
   <td>${plato.idPlato}</td>
   <td>${plato.nombrePlato}</td>
@@ -113,6 +114,7 @@ const llenarTabla = (plato) => {
   `;
   tbody.appendChild(fila);
 };
+
 let id = 1;
 btnRegistrar.onclick = (e) => {
   if (
@@ -134,6 +136,7 @@ btnRegistrar.onclick = (e) => {
       tipoPlato: tipo,
       categoriaPlato: categoria,
     };
+    row0.innerHTML = " ";
     llenarTabla(objPlato);
   }
   id++;

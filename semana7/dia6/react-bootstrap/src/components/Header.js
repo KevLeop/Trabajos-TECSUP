@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
         <a className="navbar-brand" href="#">
           Navbar
         </a>
@@ -67,4 +67,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

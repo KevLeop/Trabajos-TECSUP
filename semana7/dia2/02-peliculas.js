@@ -42,6 +42,7 @@ const getPeliculasPopulares = () => {
 getPeliculasPopulares();
 
 const dibujarBusqueda = ({ results = [] }) => {
+  divResultados.innerHTML = "";
   results.forEach((peli) => {
     const divRes = document.createElement("div");
     divRes.classList.add(
@@ -75,25 +76,41 @@ const dibujarBusqueda = ({ results = [] }) => {
   });
 };
 
-formBusqueda.onsubmit = (e) => {
-  e.preventDefault();
-  divResultados.innerHTML = "";
-  let busqueda = inputBusqueda.value;
+// formBusqueda.onsubmit = (e) => {
+//   e.preventDefault();
+//   divResultados.innerHTML = "";
+//   let busqueda = inputBusqueda.value;
 
-  /**
-   * encodeURI(string_con_espacios_y_simbolos)
-   * Codifica un string para que pueda viajar a traves
-   * de una URL.
-   * Retorna el valor codificado
-   */
-  busqueda = encodeURI(busqueda);
+//   /**
+//    * encodeURI(string_con_espacios_y_simbolos)
+//    * Codifica un string para que pueda viajar a traves
+//    * de una URL.
+//    * Retorna el valor codificado
+//    */
+//   busqueda = encodeURI(busqueda);
 
-  let url = `https://api.themoviedb.org/3/search/movie?api_key=105eb79aa1e6df60a2b95878ad2289aa&language=es-ES&query=${busqueda}&page=1&include_adult=false`;
+//   let url = `https://api.themoviedb.org/3/search/movie?api_key=105eb79aa1e6df60a2b95878ad2289aa&language=es-ES&query=${busqueda}&page=1&include_adult=false`;
 
-  fetch(url).then((peticion) => {
-    peticion.json().then((data) => {
-      console.log(data);
-      dibujarBusqueda(data);
+//   fetch(url).then((peticion) => {
+//     peticion.json().then((data) => {
+//       console.log(data);
+//       dibujarBusqueda(data);
+//     });
+//   });
+// };
+
+inputBusqueda.onkeyup = (e) => {
+  let busqueda = inputBusqueda.value.trim();
+  if (busqueda.length < 3) {
+    return;
+  } else {
+    busqueda = encodeURI(busqueda);
+    let url = `https://api.themoviedb.org/3/search/movie?api_key=105eb79aa1e6df60a2b95878ad2289aa&language=es-ES&query=${busqueda}&page=1&include_adult=false`;
+    fetch(url).then((peticion) => {
+      peticion.json().then((data) => {
+        console.log(data);
+        dibujarBusqueda(data);
+      });
     });
-  });
+  }
 };

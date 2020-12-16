@@ -1,4 +1,5 @@
 import React from "react";
+import Categorias from "./Categorias";
 
 const Pelicula = ({ peli }) => {
   return (
@@ -10,7 +11,22 @@ const Pelicula = ({ peli }) => {
           className="card-img-top"
         />
         <div className="card-title">{peli.original_title}</div>
-        <div className="card-body">{peli.overview}</div>
+        <div className="card-body">
+          <p>{peli.overview}</p>
+          <div>
+            <Categorias cats={peli.genre_ids} />
+          </div>
+        </div>
+        <div className="footer">
+          <button
+            className="btn btn-outline-secondary"
+            onClick={(e) => {
+              alert(peli.original_title);
+            }}
+          >
+            Ver más
+          </button>
+        </div>
       </div>
     </div>
   );

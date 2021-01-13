@@ -6,6 +6,7 @@ import CategoriaScreen from "./screens/categoria/CategoriaScreen";
 import HomeScreen from "./screens/home/HomeScreen";
 import HeaderGlobal from "./components/HeaderGlobal";
 import ProductosState from "./contextos/productosState";
+import "animate.css/animate.min.css";
 
 const App = () => {
   return (

@@ -1,30 +1,64 @@
 import React, { useContext } from "react";
 import ProductosContext from "../../../contextos/productosContext";
+import Swal from "sweetalert2";
+import { deleteProducto } from "../../../services/productosService";
 
 const Productos = () => {
-  const { productos, cargandoProductos, obtenerProductos } = useContext(
-    ProductosContext
-  );
-  // console.log(productos);
-  // console.log(cargandoProductos);
-  // console.log("-------------------");
+  const {
+    productos,
+    cargandoProductos,
+    obtenerProductos,
+    setModalEditar,
+    setProductoEditar,
+  } = useContext(ProductosContext);
+
+  const eliminar = (prod_id) => {
+    Swal.fire({
+      title: "Seguro de eliminar el producto?",
+      icon: "error",
+      text: "Los cambios serán irreversibles",
+      showCancelButton: true,
+    }).then((rpta) => {
+      deleteProducto(prod_id).then((data) => {
+        if (data.prod_id) {
+          obtenerProductos();
+          Swal.fire({
+            title: "Eliminado!",
+            icon: "success",
+            timer: 800,
+            showCancelButton: false,
+            position: "top-end",
+          });
+        }
+      });
+    });
+  };
+
   return (
     <section className="col-md-8">
       <div className="card shadow">
         <div className="card-body">
           {cargandoProductos ? (
-            <div>Cargando...</div>
+            <div className="alert alert-info text-center" role="alert">
+              <h4 className="alert-heading  ">Cargando Productos</h4>
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+                <p className="mb-0"></p>
+              </div>
+            </div>
           ) : (
             <>
-              <button
-                className="btn btn-warning"
-                onClick={() => {
-                  obtenerProductos();
-                }}
-              >
-                {" "}
-                RefreshTable
-              </button>
+              <div className="text-right mb-3">
+                <button
+                  className="btn btn-dark"
+                  onClick={() => {
+                    obtenerProductos();
+                  }}
+                >
+                  RefreshTable
+                </button>
+              </div>
+
               <div className="table-responsive">
                 <table className="table table-bordered table-striped">
                   <thead>
@@ -52,7 +86,27 @@ const Productos = () => {
                           <td>
                             <img src={objProducto.prod_img} alt="" width="65" />{" "}
                           </td>
-                          <td>Acciones</td>
+                          <td>
+                            <div className="d-flex">
+                              <button
+                                className="btn btn-secondary"
+                                onClick={() => {
+                                  setProductoEditar(objProducto);
+                                  setModalEditar(true);
+                                }}
+                              >
+                                Editar
+                              </button>
+                              <button
+                                className="btn btn-danger"
+                                onClick={() => {
+                                  eliminar(objProducto.prod_id);
+                                }}
+                              >
+                                Eliminar
+                              </button>
+                            </div>
+                          </td>
                         </tr>
                       );
                     })}

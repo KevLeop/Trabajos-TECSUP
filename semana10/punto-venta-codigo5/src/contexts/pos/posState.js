@@ -24,6 +24,38 @@ const PosState = ({ children }) => {
     });
   };
 
+  const restarPlatoAPedido = (objPlato) => {
+    let { pedidos, mesa_global } = state;
+    if (!mesa_global) return;
+    let objPedidoActual = pedidos.find(
+      (objPedido) => objPedido.objMesa.mesa_id === mesa_global.mesa_id
+    );
+
+    if (objPedidoActual) {
+      let platoPedido = objPedidoActual.platos.find(
+        (plato) => plato.plato_id === objPlato.plato_id
+      );
+
+      if (platoPedido) {
+        platoPedido.cantidad -= 1;
+        if (platoPedido.cantidad === 0) {
+          objPedidoActual.platos = objPedidoActual.platos.filter(
+            (plato) => plato.plato_id !== objPlato.plato_id
+          );
+          if (objPedidoActual.platos.length === 0) {
+            pedidos = pedidos.filter(
+              (pedido) =>
+                pedido.objMesa.mesa_id !== objPedidoActual.objMesa.mesa_id
+            );
+          }
+        }
+        dispatch({
+          type: "ACTUALIZAR_PEDIDOS",
+          data: pedidos,
+        });
+      }
+    }
+  };
   const incrementarPlatoAPedido = (objPlato) => {
     const { pedidos, mesa_global } = state;
     if (!mesa_global) return;
@@ -34,6 +66,33 @@ const PosState = ({ children }) => {
     // caso contrario el objPedido sería "undefined"
     if (objPedidoActual) {
       // significa que la mesa_global actual ya tenía pedido
+      let platoPedido = objPedidoActual.platos.find(
+        (plato) => plato.plato_id === objPlato.plato_id
+      );
+      /**
+       * Preguntamos si el plato que estuvimos buscando ya se encontraba en el arreglo
+       * del platos, debemosaumentar una unidad a la cantidad,
+       * en caso contrario, significa que la mesa si tenía platos, pero no tenía un plato
+       * que queremos agregar
+       */
+      if (platoPedido) {
+        // ya habia uno o más platos del plato que qeuermos agregar
+        platoPedido.cantidad += 1;
+        dispatch({
+          type: "ACTUALIZAR_PEDIDOS",
+          data: pedidos,
+        });
+      } else {
+        // la mesa tenía platos, pero no como el que queremos agregar
+        objPedidoActual.platos.push({
+          ...objPlato,
+          cantidad: 1,
+        });
+        dispatch({
+          type: "ACTUALIZAR_PEDIDOS",
+          data: pedidos,
+        });
+      }
     } else {
       // significa que la mesa_global actual, está vacía, no tenía ningun pedido
       //agregamos el primer pedido de la mesa actual, con primer plato
@@ -72,6 +131,7 @@ const PosState = ({ children }) => {
         mesa_global: state.mesa_global,
         incrementarPlatoAPedido: incrementarPlatoAPedido,
         pedidos: state.pedidos,
+        restarPlatoAPedido: restarPlatoAPedido,
       }}
     >
       {children}
